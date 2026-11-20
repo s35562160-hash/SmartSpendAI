@@ -225,10 +225,12 @@ Keep the recommendations practical and beginner-friendly.
 """
 
     interaction = client.interactions.create(
-        model="gemini-3.8-flash",
-        input=prompt
-    )
-
+    model="gemini-3.8-flash",
+    input=prompt,
+    generation_config={"thinking_level": "LOW"},
+    timeout=60,
+    automatic_continuation=False
+)
     result = interaction.output_text
 
     if not result:
