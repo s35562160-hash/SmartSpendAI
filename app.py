@@ -227,7 +227,7 @@ Keep the recommendations practical and beginner-friendly.
     interaction = client.interactions.create(
     model="gemini-3.8-flash",
     input=prompt,
-    generation_config={"thinking_level": "LOW"},
+    generation_config={"thinking_level": "low"},
     timeout=60,
     automatic_continuation=False
 )
